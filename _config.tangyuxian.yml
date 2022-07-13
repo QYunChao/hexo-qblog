@@ -38,7 +38,7 @@ menu:
   文章归档:
     - /archives.html
     - icon-hanbao1
-  关于糖糖:
+  关于作者:
     - /about.html
     - icon-jiubei1
   我的朋友:
@@ -60,36 +60,36 @@ widgets:
 maxTagcloud: 0  # 0 表示不限制
 
 social:
-  QQ:
-    - http://wpa.qq.com/msgrd?v=3&uin=2120252100&site=qq&menu=yes
-    - icon-QQ
-    - rgb(64, 196, 255)
-    - rgba(64, 196, 255, .1)
-  mail:
-    - mailto:tangyuxian@vip.qq.com
-    - icon-mail-fill
-    - rgb(249,8,8)
-    - rgba(249,8,8,.1)
-  CSDN:
-    - https://blog.csdn.net/qq_40621378?type=blog
-    - icon-csdn
-    - rgb(199,29,35)
-    - rgba(199,29,35,.1)
-  博客园:
-    - https://www.cnblogs.com/lovetangyuxian/
-    - icon-bokeyuan
-    - rgb(66, 214, 29)
-    - rgba(66, 214, 29, .1)
   GitHub:
-    - https://github.com/tangyuxian/
+    - https://github.com/QYunChao/
     - icon-github
     - rgb(25, 23, 23)
     - rgba(25, 23, 23, .15)
-  gitee:
-    - https://gitee.com/tangyuxian
-    - icon-mayun
-    - rgb(255, 255, 255)
-    - rgb(199,29,35)
+  # QQ:
+  #   - http://wpa.qq.com/msgrd?v=3&uin=2120252100&site=qq&menu=yes
+  #   - icon-QQ
+  #   - rgb(64, 196, 255)
+  #   - rgba(64, 196, 255, .1)
+  # mail:
+  #   - mailto:tangyuxian@vip.qq.com
+  #   - icon-mail-fill
+  #   - rgb(249,8,8)
+  #   - rgba(249,8,8,.1)
+  # CSDN:
+  #   - https://blog.csdn.net/qq_40621378?type=blog
+  #   - icon-csdn
+  #   - rgb(199,29,35)
+  #   - rgba(199,29,35,.1)
+  # 博客园:
+  #   - https://www.cnblogs.com/lovetangyuxian/
+  #   - icon-bokeyuan
+  #   - rgb(66, 214, 29)
+  #   - rgba(66, 214, 29, .1)
+  # gitee:
+  #   - https://gitee.com/tangyuxian
+  #   - icon-mayun
+  #   - rgb(255, 255, 255)
+  #   - rgb(199,29,35)
 
 
 site_verification: # 向搜索引擎验证你对站点的所有权，用于向搜索引擎提交 sitemap 和管理站点被搜索引擎收录的情况。
@@ -168,7 +168,7 @@ widgetLink: #链接组件
     img : <img_path>
     link : <url>
 sidebar: ''
-beian: '辽ICP备2021002341号'
+beian: '粤ICP备2021159442号'
 #  --------小埋主题 追加配置
 # Online daovoice 即时通讯插件(请到 http://dashboard.daovoice.io/ 申请key)
 daovoice:
