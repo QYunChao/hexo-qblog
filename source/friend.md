@@ -19,9 +19,9 @@ layout: friend
 
 ## 添加友链
 
-> 名称：折影轻梦
-> 介绍：崇尚自由、热爱科学、热爱艺术。
-> 链接：https://nexmoe.com/
+> 名称：邱昀晁
+> 介绍：学无止，爱无涯。
+> 链接：http://www.withstudy.cn/
 > LOGO：https://avatar.mixcm.com/github/nexmoe
 
 需要更新头像或者链接请留言，有时间会处理的
