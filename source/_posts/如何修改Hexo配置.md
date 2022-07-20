@@ -1,5 +1,5 @@
 ---
-title: 修改Hexo配置
+title: 如何修改Hexo配置
 date: 2022-07-14 23:12:08
 tags:
   -	博客
