@@ -9,273 +9,168 @@ tags:
 
 <!--more-->
 
-<!DOCTYPE html><html><head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            @charset "utf-8";
-            *,
-            *::after,
-            *::before {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            body {
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Segoe UI", "Helvetica Neue", "PingFang SC", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", sans-serif;
-                font-size: 16px;
-                line-height: 24px;
-                color: #222;
-            }
-            ::selection {
-                background-color: rgba(107, 112, 184, 0.16);
-            }
-            #title {
-                font-size: 36px;
-                line-height: 54px;
-                font-weight: 500;
-            }
-            h1 {
-                margin: 28px 0 0;
-                font-size: 28px;
-                line-height: 42px;
-            }
-            h2 {
-                margin: 24px 0 0;
-                font-size: 24px;
-                line-height: 26px;
-            }
-            h3 {
-                margin: 20px 0 0;
-                font-size: 20px;
-                line-height: 30px;
-            }
-            p {
-                margin: 16px 0 0;
-                line-height: 24px;
-            }
-            blockquote {
-                margin: 16px 0 0;
-                padding: 0 0 0 20px;
-                line-height: 24px;
-                box-shadow: inset 4px 0 0 0 #EEEEEE;
-            }
-            ol,
-            ul {
-                padding: 8px 0 0 32px;
-            }
-            li {
-                margin: 8px 0 0;
-                line-height: 24px;
-            }
-            hr {
-                margin: 16px 0 0;
-                height: 1px;
-                background-color: #e9e9e9;
-                border: none;
-            }
-            img {
-                width: 100%;
-                display: block;
-            }
-            pre {
-                margin: 12px 0 0;
-                border-radius: 4px;
-                padding: 12px;
-                background-color: #f5f5f5;
-                font-size: 14px;
-                white-space: pre-wrap;
-            }
-            code {
-                color: #657B83;
-                font-size: inherit;
-                border-radius: 4px;
-                display: block;
-            }
-            p code,
-            table code {
-                display: inline;
-                padding: 4px;
-                background-color: #f5f5f5;
-            }
-            a,
-            a u {
-                color: rgb(61, 168, 245);
-                font-size: 16px;
-                line-height: 20px;
-                text-decoration: none;
-                cursor: pointer;
-            }
-            a:hover {
-                text-decoration: underline;
-            }
-            table {
-                margin: 32px 0 0;
-                border-left: 1px solid #D8D8D8;
-                border-top: 1px solid #D8D8D8;
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
-            table td {
-                table-layout: fixed;
-                padding: 8px 12px;
-                min-width: 200px;
-                max-width: 1000px;
-                border-right: 1px solid #D8D8D8;
-                border-bottom: 1px solid #D8D8D8;
-            }
-            table a,
-            table blockquote,
-            table code,
-            table h1,
-            table h2,
-            table h3,
-            table li,
-            table p {
-                margin: 0;
-            }
-            table ol,
-            table ul {
-                padding: 0 0 0 30px;
-            }
-            footer {
-                padding: 48px;
-                background-color: #f5f5f5;
-                display: flex;
-                justify-content: center;
-            }
-            footer a {
-                padding-left: 28px;
-                line-height: 24px;
-                height: 24px;
-                color: #808080;
-                background-image: url("https://dn-clients.teambition.net/thoughts/thoughts_logo.svg");
-                background-size: 24px 24px;
-                background-repeat: no-repeat;
-            }
-            #page {
-                max-width: 1024px;
-                min-height: calc(100vh - 120px);
-                margin: 0 auto;
-                padding: 72px;
-            }
-            /* 检查项 */
-            [data-type="checkbox"] {
-                padding-left: 15px;
-            }
-            [data-check="true"],
-            [data-check="false"] {
-                list-style-type: none;
-                padding-left: 0;
-            }
-            [data-check="true"]::before,
-            [data-check="false"]::before {
-                content: "";
-                width: 14px;
-                height: 14px;
-                border-radius: 4px;
-                vertical-align: bottom;
-                display: inline-block;
-                margin: 5px 11px;
-                background-position: 50%;
-                background-repeat: no-repeat;
-                box-shadow: inset 0 0 0 1px#ddd;
-            }
-            [data-check="true"]::before {
-                background-color: #6B70B8;
-                box-shadow: inset 0 0 0 1px #6B70B8;
-                background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTJweCIgaGVpZ2h0PSIxMnB4IiB2aWV3Qm94PSIwIDAgMTIgMTIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU0ICg3NjQ4MCkgLSBodHRwczovL3NrZXRjaGFwcC5jb20gLS0+CiAgICA8dGl0bGU+55S75p2/PC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IueUu+advyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBvbHlnb24gaWQ9InYiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgcG9pbnRzPSIyLjM0NzM1NTA3IDUuOTc5NTQ0MzcgMS42NDkzMzI2MyA2LjY5NTYyMDI1IDQuNTM2MjIwMiA5LjUwOTcyNDczIDEwLjM1MzA5MTMgMy43MDgwMjk4IDkuNjQ2OTA4NzIgMyA0LjUyODE3MzMzIDguMTA1MzgwNjgiPjwvcG9seWdvbj4KICAgIDwvZz4KPC9zdmc+");
-            }
-            /* 块样式 */
-            [data-type="attachment"] a,
-            [data-type="relation"] a,
-            [data-type="embed"] a {
-                font-size: 14px;
-                line-height: 24px;
-                height: 48px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                width: 100%;
-                margin: 16px 0 0;
-                display: block;
-                padding: 12px 12px 12px 40px;
-                color: #222!important;
-                border-radius: 4px;
-                transition: 0.3s ease;
-                box-shadow: inset 0 0 0 1px #eeeeee;
-                background-repeat: no-repeat;
-                background-position: 12px 50%;
-            }
-            [data-type="attachment"] a:hover,
-            [data-type="relation"] a:hover,
-            [data-type="embed"] a:hover {
-                text-decoration: none!important;
-                background-color: #f5f5f5;
-            }
-            /* 行内样式 */
-            [data-type="document"],
-            [data-type="file"],
-            [data-type="folder"],
-            [data-type="teambition-task"],
-            [data-type="teambition-file"],
-            [data-type="teambition-folder"],
-            [data-type="teambition-date"],
-            [data-type="DATE"] {
-                background-position: 4px 50%;
-                padding: 0 4px 0 26px;
-                background-repeat: no-repeat;
-            }
-            /* 类型图标 */
-            [data-type="embed"] a {
-                background-image: url("data:image/svg+xml;base64,PHN2ZwogICAgd2lkdGg9IjIwcHgiCiAgICBoZWlnaHQ9IjIwcHgiCiAgICB2aWV3Qm94PSIwIDAgMjAgMjAiCiAgICB2ZXJzaW9uPSIxLjEiCiAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8cGF0aAogICAgICAgIGQ9Ik0xMC4wMDAxLDE0LjU2ODQgQzEwLjA4MTEsMTQuNTY4NCAxMC4xNjExLDE0LjU4NDQgMTAuMjM2MSwxNC42MTY0IEwxNC42MDkxLDE2LjQ5MDQgTDE0LjYwOTEsNC4wODg0IEMxNC42MDkxLDMuNTk4NCAxNC4yMTAxLDMuMjAwNCAxMy43MjExLDMuMjAwNCBMNi4yNzkxLDMuMjAwNCBDNS43OTAxLDMuMjAwNCA1LjM5MTEsMy41OTg0IDUuMzkxMSw0LjA4ODQgTDUuMzkxMSwxNi40OTA0IEw5Ljc2NDEsMTQuNjE2NCBDOS44MzkxLDE0LjU4NDQgOS45MTkxLDE0LjU2ODQgMTAuMDAwMSwxNC41Njg0IEwxMC4wMDAxLDE0LjU2ODQgWiBNMTUuMjA5MSwxOC4wMDA0IEMxNS4xMjkxLDE4LjAwMDQgMTUuMDQ4MSwxNy45ODQ0IDE0Ljk3MzEsMTcuOTUyNCBMMTAuMDAwMSwxNS44MjA0IEw1LjAyNzEsMTcuOTUyNCBDNC44NDIxLDE4LjAzMTQgNC42MjgxLDE4LjAxMjQgNC40NjExLDE3LjkwMTQgQzQuMjkyMSwxNy43OTA0IDQuMTkxMSwxNy42MDI0IDQuMTkxMSwxNy40MDA0IEw0LjE5MTEsNC4wODg0IEM0LjE5MTEsMi45Mzc0IDUuMTI4MSwyLjAwMDQgNi4yNzkxLDIuMDAwNCBMMTMuNzIxMSwyLjAwMDQgQzE0Ljg3MjEsMi4wMDA0IDE1LjgwOTEsMi45Mzc0IDE1LjgwOTEsNC4wODg0IEwxNS44MDkxLDE3LjQwMDQgQzE1LjgwOTEsMTcuNjAyNCAxNS43MDgxLDE3Ljc5MDQgMTUuNTM5MSwxNy45MDE0IEMxNS40NDAxLDE3Ljk2NjQgMTUuMzI1MSwxOC4wMDA0IDE1LjIwOTEsMTguMDAwNCBMMTUuMjA5MSwxOC4wMDA0IFoiCiAgICAgICAgaWQ9ImJvb2ttYXJrIgogICAgICAgIGZpbGw9IiNBNkE2QTYiPjwvcGF0aD4KPC9zdmc+");
-            }
-            [data-type="DATE"] {
-                color: #808080;
-                background-image: url("data:image/svg+xml;base64,PHN2ZwogICAgd2lkdGg9IjIwcHgiCiAgICBoZWlnaHQ9IjIwcHgiCiAgICB2aWV3Qm94PSIwIDAgMjAgMjAiCiAgICB2ZXJzaW9uPSIxLjEiCiAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8cGF0aAogICAgICAgIGQ9Ik0xNS4yOTQsMy40MTIgQzE2LjM5NCwzLjQxMiAxNy4yOTQsNC4zMTIgMTcuMjk0LDUuNDEyIEwxNy4yOTQsMTYgQzE3LjI5NCwxNy4xIDE2LjM5NCwxOCAxNS4yOTQsMTggTDQuNzA2LDE4IEMzLjYwNiwxOCAyLjcwNiwxNy4xIDIuNzA2LDE2IEwyLjcwNiw1LjQxMiBDMi43MDYsNC4zMTIgMy42MDYsMy40MTIgNC43MDYsMy40MTIgTDYuMTQ2LDMuNDEyIEw2LjE0NiwyLjYgQzYuMTQ2LDIuMjY5IDYuNDE1LDIgNi43NDYsMiBDNy4wNzgsMiA3LjM0NiwyLjI2OSA3LjM0NiwyLjYgTDcuMzQ2LDMuNDEyIEwxMi42NTQsMy40MTIgTDEyLjY1NCwyLjYgQzEyLjY1NCwyLjI2OSAxMi45MjIsMiAxMy4yNTQsMiBDMTMuNTg2LDIgMTMuODU0LDIuMjY5IDEzLjg1NCwyLjYgTDEzLjg1NCwzLjQxMiBMMTUuMjk0LDMuNDEyIFogTTE1LjI5NCwxNi44IEMxNS43MjgsMTYuOCAxNi4wOTQsMTYuNDM0IDE2LjA5NCwxNiBMMTYuMDk0LDguMjgyIEwzLjkwNiw4LjI4MiBMMy45MDYsMTYgQzMuOTA2LDE2LjQzNCA0LjI3MiwxNi44IDQuNzA2LDE2LjggTDE1LjI5NCwxNi44IFogTTQuNzA2LDQuNjEyIEM0LjI3Miw0LjYxMiAzLjkwNiw0Ljk3OCAzLjkwNiw1LjQxMiBMMy45MDYsNy4wODIgTDE2LjA5NCw3LjA4MiBMMTYuMDk0LDUuNDEyIEMxNi4wOTQsNC45NzggMTUuNzI4LDQuNjEyIDE1LjI5NCw0LjYxMiBMMTMuODU0LDQuNjEyIEwxMy44NTQsNS4wMzggQzEzLjg1NCw1LjM2OSAxMy41ODYsNS42MzggMTMuMjU0LDUuNjM4IEMxMi45MjIsNS42MzggMTIuNjU0LDUuMzY5IDEyLjY1NCw1LjAzOCBMMTIuNjU0LDQuNjEyIEw3LjM0Niw0LjYxMiBMNy4zNDYsNS4wMzggQzcuMzQ2LDUuMzY5IDcuMDc4LDUuNjM4IDYuNzQ2LDUuNjM4IEM2LjQxNSw1LjYzOCA2LjE0Niw1LjM2OSA2LjE0Niw1LjAzOCBMNi4xNDYsNC42MTIgTDQuNzA2LDQuNjEyIFoiCiAgICAgICAgZmlsbD0iI0E2QTZBNiI+PC9wYXRoPgo8L3N2Zz4=");
-            }
-            [data-type="attachment"] a {
-                background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU0ICg3NjQ4MCkgLSBodHRwczovL3NrZXRjaGFwcC5jb20gLS0+CiAgICA8dGl0bGU+ZnVqaWFuPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+CiAgICAgICAgPHBhdGggZD0iTTE0LDQgTDcuNiw0IEM0LjUxMiw0IDIsNi41MTIgMiw5LjYgQzIsMTIuNjg4IDQuNTEyLDE1LjIgNy42LDE1LjIgTDEyLjk5NiwxNS4yIEMxMy4zMjcsMTUuMiAxMy41OTYsMTQuOTMxIDEzLjU5NiwxNC42IEMxMy41OTYsMTQuMjY5IDEzLjMyNywxNCAxMi45OTYsMTQgTDcuNiwxNCBDNS4xNzQsMTQgMy4yLDEyLjAyNiAzLjIsOS42IEMzLjIsNy4xNzQgNS4xNzQsNS4yIDcuNiw1LjIgTDE0LDUuMiBDMTUuNTQ0LDUuMiAxNi44LDYuNDU2IDE2LjgsOCBDMTYuOCw5LjU0NCAxNS41NDQsMTAuOCAxNCwxMC44IEw3LjgxMywxMC44IEM3LjE1MiwxMC44IDYuNjE0LDEwLjI2MiA2LjYxNCw5LjYgQzYuNjE0LDguOTM4IDcuMTUyLDguNCA3LjgxMyw4LjQgTDEyLjk5Niw4LjQgQzEzLjMyNyw4LjQgMTMuNTk2LDguMTMyIDEzLjU5Niw3LjggQzEzLjU5Niw3LjQ2OSAxMy4zMjcsNy4yIDEyLjk5Niw3LjIgTDcuODEzLDcuMiBDNi40OSw3LjIgNS40MTQsOC4yNzcgNS40MTQsOS42IEM1LjQxNCwxMC45MjMgNi40OSwxMiA3LjgxMywxMiBMMTQsMTIgQzE2LjIwNiwxMiAxOCwxMC4yMDYgMTgsOCBDMTgsNS43OTQgMTYuMjA2LDQgMTQsNCBMMTQsNCBaIiBpZD0icGF0aC0xIj48L3BhdGg+CiAgICA8L2RlZnM+CiAgICA8ZyBpZD0iZnVqaWFuIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8bWFzayBpZD0ibWFzay0yIiBmaWxsPSJ3aGl0ZSI+CiAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+CiAgICAgICAgPC9tYXNrPgogICAgICAgIDx1c2UgaWQ9Imljb24tcGFwZXJjbGlwIiBmaWxsPSIjQTZBNkE2IiB4bGluazpocmVmPSIjcGF0aC0xIj48L3VzZT4KICAgIDwvZz4KPC9zdmc+");
-            }
-            [data-type="document"] {
-                color: #808080;
-                background-image: url("data:image/svg+xml;base64,PHN2ZwogICAgd2lkdGg9IjIwcHgiCiAgICBoZWlnaHQ9IjIwcHgiCiAgICB2aWV3Qm94PSIwIDAgMjAgMjAiCiAgICB2ZXJzaW9uPSIxLjEiCiAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8cGF0aAogICAgICAgIGQ9Ik0xMS4xMDA1MDUxLDIgTDE3LDcuODk5NDk0OTQgTDE3LDE2IEMxNywxNy4xMDQ1Njk1IDE2LjEwNDU2OTUsMTggMTUsMTggTDUsMTggQzMuODk1NDMwNSwxOCAzLDE3LjEwNDU2OTUgMywxNiBMMyw0IEMzLDIuODk1NDMwNSAzLjg5NTQzMDUsMiA1LDIgTDExLjEwMDUwNTEsMiBaIgogICAgICAgIGlkPSJQYXRoIgogICAgICAgIGZpbGwtb3BhY2l0eT0iMC4zIgogICAgICAgIGZpbGw9IiM2QjcwQjgiPjwvcGF0aD4KICAgIDxwYXRoCiAgICAgICAgZD0iTTE3LDggTDEzLDggQzExLjg5NTQzMDUsOCAxMSw3LjEwNDU2OTUgMTEsNiBMMTEsMiBMMTEuMTAwNTA1MSwyIEwxNyw3Ljg5OTQ5NDk0IEwxNyw4IFoiCiAgICAgICAgaWQ9IlBhdGgiCiAgICAgICAgZmlsbD0iIzZCNzBCOCI+PC9wYXRoPgogICAgPHJlY3QKICAgICAgICBpZD0iZG9jaWNvbi90aG91Z2h0LWRvYyIKICAgICAgICBmaWxsPSIjNkI3MEI4IgogICAgICAgIHg9IjUuNSIKICAgICAgICB5PSIxMSIKICAgICAgICB3aWR0aD0iOSIKICAgICAgICBoZWlnaHQ9IjEuNiIKICAgICAgICByeD0iMC44Ij48L3JlY3Q+CiAgICA8cmVjdAogICAgICAgIGlkPSJkb2NpY29uL3Rob3VnaHQtZG9jIgogICAgICAgIGZpbGw9IiM2QjcwQjgiCiAgICAgICAgeD0iNS41IgogICAgICAgIHk9IjE0IgogICAgICAgIHdpZHRoPSI0IgogICAgICAgIGhlaWdodD0iMS42IgogICAgICAgIHJ4PSIwLjgiPjwvcmVjdD4KPC9zdmc+");
-            }
-            [data-type="file"] {
-                color: #808080;
-                background-image: url("data:image/svg+xml;base64,PHN2ZwogICAgd2lkdGg9IjIwcHgiCiAgICBoZWlnaHQ9IjIwcHgiCiAgICB2aWV3Qm94PSIwIDAgMjAgMjAiCiAgICB2ZXJzaW9uPSIxLjEiCiAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8cGF0aAogICAgICAgIGQ9Ik0xMS4xMDA1MDUxLDIgTDE3LDcuODk5NDk0OTQgTDE3LDE2IEMxNywxNy4xMDQ1Njk1IDE2LjEwNDU2OTUsMTggMTUsMTggTDUsMTggQzMuODk1NDMwNSwxOCAzLDE3LjEwNDU2OTUgMywxNiBMMyw0IEMzLDIuODk1NDMwNSAzLjg5NTQzMDUsMiA1LDIgTDExLjEwMDUwNTEsMiBaIgogICAgICAgIGlkPSJQYXRoIgogICAgICAgIGZpbGwtb3BhY2l0eT0iMC4zIgogICAgICAgIGZpbGw9IiM2QjcwQjgiPjwvcGF0aD4KICAgIDxwYXRoCiAgICAgICAgZD0iTTE3LDggTDEzLDggQzExLjg5NTQzMDUsOCAxMSw3LjEwNDU2OTUgMTEsNiBMMTEsMiBMMTEuMTAwNTA1MSwyIEwxNyw3Ljg5OTQ5NDk0IEwxNyw4IFoiCiAgICAgICAgaWQ9IlBhdGgiCiAgICAgICAgZmlsbD0iIzZCNzBCOCI+PC9wYXRoPgo8L3N2Zz4=");
-            }
-            [data-type="folder"] {
-                color: #808080;
-                background-image: url("data:image/svg+xml;base64,PHN2ZwogICAgd2lkdGg9IjIwcHgiCiAgICBoZWlnaHQ9IjIwcHgiCiAgICB2aWV3Qm94PSIwIDAgMjAgMjAiCiAgICB2ZXJzaW9uPSIxLjEiCiAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8cGF0aAogICAgICAgIGQ9Ik0xNi41LDUgQzE3LjYwNDU2OTUsNSAxOC41LDUuODk1NDMwNSAxOC41LDcgTDE4LjUsOCBMMS41LDggQzEuNSw3LjM3MDczNTg5IDEuNSw2LjM3MDczNTg5IDEuNSw1IEMxLjUsMy44OTU0MzA1IDIuMzk1NDMwNSwzIDMuNSwzIEw3LjI3NjQ2OTQ1LDMgQzcuNTYyNDk1NDcsMyA3LjgzNDgzMDg0LDMuMTIyNDc4ODEgOC4wMjQ2MTgwMywzLjMzNjQ2ODc3IEw5LjUsNSBMMTYuNSw1IFoiCiAgICAgICAgaWQ9ImZvbGRlcmljb24vdGhvdWdodC1mb2xkZXIiCiAgICAgICAgZmlsbD0iIzZCNzBCOCI+PC9wYXRoPgogICAgPHBhdGgKICAgICAgICBkPSJNMS41LDggTDE4LjUsOCBMMTguNSwxNSBDMTguNSwxNi4xMDQ1Njk1IDE3LjYwNDU2OTUsMTcgMTYuNSwxNyBMMy41LDE3IEMyLjM5NTQzMDUsMTcgMS41LDE2LjEwNDU2OTUgMS41LDE1IEwxLjUsOCBaIgogICAgICAgIGlkPSJmb2xkZXJpY29uL3Rob3VnaHQtZm9sZGVyIgogICAgICAgIGZpbGwtb3BhY2l0eT0iMC4zIgogICAgICAgIGZpbGw9IiM2QjcwQjgiPjwvcGF0aD4KPC9zdmc+");
-            }
-            [data-type="teambition-task"] {
-                color: #808080;
-                background-image: url("data:image/svg+xml;base64,PHN2ZwogICAgd2lkdGg9IjIwcHgiCiAgICBoZWlnaHQ9IjIwcHgiCiAgICB2aWV3Qm94PSIwIDAgMjAgMjAiCiAgICB2ZXJzaW9uPSIxLjEiCiAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8cmVjdAogICAgICAgIGlkPSJ0YXNraWNvbi90Yi10YXNrIgogICAgICAgIGZpbGwtb3BhY2l0eT0iMC4zIgogICAgICAgIGZpbGw9IiMzREE4RjUiCiAgICAgICAgeD0iMyIKICAgICAgICB5PSIzIgogICAgICAgIHdpZHRoPSIxNCIKICAgICAgICBoZWlnaHQ9IjE0IgogICAgICAgIHJ4PSIyIj48L3JlY3Q+CiAgICA8cGF0aAogICAgICAgIGQ9Ik05Ljk0OTAyNzg5LDEwLjg3MDMzMTkgTDE3LjQzNjE4NTMsMy40MzI0NTAwNCBDMTcuNzQ5NjM0NSwzLjEyMTA2Mzc2IDE4LjI1NjE2MzcsMy4xMjI3MzYwOSAxOC41Njc1NSwzLjQzNjE4NTI4IEMxOC44Nzg5MzYyLDMuNzQ5NjM0NDcgMTguODc3MjYzOSw0LjI1NjE2MzY5IDE4LjU2MzgxNDcsNC41Njc1NDk5NiBMMTAuNTEwODE1MiwxMi41Njc1NSBDMTAuMTk4MDMzNywxMi44NzgyNzI5IDkuNjkyODE2MjcsMTIuODc3MzY2MiA5LjM4MTE1MjE1LDEyLjU2NTUyMjUgTDYuNDM0MTUxNzEsOS42MTY4MjQ0NyBDNi4xMjE4MjIyNSw5LjMwNDMxNTA5IDYuMTIxOTY4MSw4Ljc5Nzc4MzEzIDYuNDM0NDc3NDgsOC40ODU0NTM2NyBDNi43NDY5ODY4Niw4LjE3MzEyNDIxIDcuMjUzNTE4ODIsOC4xNzMyNzAwNiA3LjU2NTg0ODI5LDguNDg1Nzc5NDQgTDkuOTQ5MDI3ODksMTAuODcwMzMxOSBaIgogICAgICAgIGlkPSJQYXRoIgogICAgICAgIGZpbGw9IiMzREE4RjUiCiAgICAgICAgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+Cjwvc3ZnPg==");
-            }
-            [data-type="teambition-file"] {
-                color: #808080;
-                background-image: url("data:image/svg+xml;base64,PHN2ZwogICAgd2lkdGg9IjIwcHgiCiAgICBoZWlnaHQ9IjIwcHgiCiAgICB2aWV3Qm94PSIwIDAgMjAgMjAiCiAgICB2ZXJzaW9uPSIxLjEiCiAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8cGF0aAogICAgICAgIGQ9Ik0xMS4xMDA1MDUxLDIgTDE3LDcuODk5NDk0OTQgTDE3LDE2IEMxNywxNy4xMDQ1Njk1IDE2LjEwNDU2OTUsMTggMTUsMTggTDUsMTggQzMuODk1NDMwNSwxOCAzLDE3LjEwNDU2OTUgMywxNiBMMyw0IEMzLDIuODk1NDMwNSAzLjg5NTQzMDUsMiA1LDIgTDExLjEwMDUwNTEsMiBaIgogICAgICAgIGlkPSJQYXRoIgogICAgICAgIGZpbGwtb3BhY2l0eT0iMC4zIgogICAgICAgIGZpbGw9IiMzREE4RjUiPjwvcGF0aD4KICAgIDxwYXRoCiAgICAgICAgZD0iTTE3LDggTDEzLDggQzExLjg5NTQzMDUsOCAxMSw3LjEwNDU2OTUgMTEsNiBMMTEsMiBMMTEuMTAwNTA1MSwyIEwxNyw3Ljg5OTQ5NDk0IEwxNyw4IFoiCiAgICAgICAgaWQ9IlBhdGgiCiAgICAgICAgZmlsbD0iIzNEQThGNSI+PC9wYXRoPgo8L3N2Zz4=");
-            }
-            [data-type="teambition-folder"] {
-                color: #808080;
-                background-image: url("data:image/svg+xml;base64,PHN2ZwogICAgd2lkdGg9IjIwcHgiCiAgICBoZWlnaHQ9IjIwcHgiCiAgICB2aWV3Qm94PSIwIDAgMjAgMjAiCiAgICB2ZXJzaW9uPSIxLjEiCiAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8cGF0aAogICAgICAgIGQ9Ik0xNi41LDUgQzE3LjYwNDU2OTUsNSAxOC41LDUuODk1NDMwNSAxOC41LDcgTDE4LjUsOCBMMS41LDggQzEuNSw3LjM3MDczNTg5IDEuNSw2LjM3MDczNTg5IDEuNSw1IEMxLjUsMy44OTU0MzA1IDIuMzk1NDMwNSwzIDMuNSwzIEw3LjI3NjQ2OTQ1LDMgQzcuNTYyNDk1NDcsMyA3LjgzNDgzMDg0LDMuMTIyNDc4ODEgOC4wMjQ2MTgwMywzLjMzNjQ2ODc3IEw5LjUsNSBMMTYuNSw1IFoiCiAgICAgICAgaWQ9ImZvbGRlcmljb24vdGItZm9sZGVyIgogICAgICAgIGZpbGw9IiMzREE4RjUiPjwvcGF0aD4KICAgIDxwYXRoCiAgICAgICAgZD0iTTEuNSw4IEwxOC41LDggTDE4LjUsMTUgQzE4LjUsMTYuMTA0NTY5NSAxNy42MDQ1Njk1LDE3IDE2LjUsMTcgTDMuNSwxNyBDMi4zOTU0MzA1LDE3IDEuNSwxNi4xMDQ1Njk1IDEuNSwxNSBMMS41LDggWiIKICAgICAgICBpZD0iZm9sZGVyaWNvbi90Yi1mb2xkZXIiCiAgICAgICAgZmlsbC1vcGFjaXR5PSIwLjMiCiAgICAgICAgZmlsbD0iIzNEQThGNSI+PC9wYXRoPgo8L3N2Zz4=");
-            }
-            [data-type="teambition-date"] {
-                color: #808080;
-                background-image: url("data:image/svg+xml;base64,PHN2ZwogICAgd2lkdGg9IjIwcHgiCiAgICBoZWlnaHQ9IjIwcHgiCiAgICB2aWV3Qm94PSIwIDAgMjAgMjAiCiAgICB2ZXJzaW9uPSIxLjEiCiAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8cmVjdAogICAgICAgIGlkPSJkYXRlaWNvbi90Yi1kYXRlIgogICAgICAgIGZpbGwtb3BhY2l0eT0iMC4zIgogICAgICAgIGZpbGw9IiMzREE4RjUiCiAgICAgICAgeD0iMiIKICAgICAgICB5PSI0IgogICAgICAgIHdpZHRoPSIxNiIKICAgICAgICBoZWlnaHQ9IjEzIgogICAgICAgIHJ4PSIyIj48L3JlY3Q+CiAgICA8cGF0aAogICAgICAgIGQ9Ik00LDQgTDE2LDQgQzE3LjEwNDU2OTUsNCAxOCw0Ljg5NTQzMDUgMTgsNiBMMTgsOCBMMiw4IEwyLDYgQzIsNC44OTU0MzA1IDIuODk1NDMwNSw0IDQsNCBaIgogICAgICAgIGlkPSJkYXRlaWNvbi90Yi1kYXRlIgogICAgICAgIGZpbGw9IiMzREE4RjUiPjwvcGF0aD4KICAgIDxwYXRoCiAgICAgICAgZD0iTTYuNiwyIEw2LjYsMiBDNy4wNDE4Mjc4LDIgNy40LDIuMzU4MTcyMiA3LjQsMi44IEw3LjQsNiBMNS44LDYgTDUuOCwyLjggQzUuOCwyLjM1ODE3MjIgNi4xNTgxNzIyLDIgNi42LDIgWiIKICAgICAgICBpZD0iZGF0ZWljb24vdGItZGF0ZSIKICAgICAgICBmaWxsPSIjM0RBOEY1Ij48L3BhdGg+CiAgICA8cGF0aAogICAgICAgIGQ9Ik0xMy40LDIgTDEzLjQsMiBDMTMuODQxODI3OCwyIDE0LjIsMi4zNTgxNzIyIDE0LjIsMi44IEwxNC4yLDYgTDEyLjYsNiBMMTIuNiwyLjggQzEyLjYsMi4zNTgxNzIyIDEyLjk1ODE3MjIsMiAxMy40LDIgWiIKICAgICAgICBpZD0iZGF0ZWljb24vdGItZGF0ZSIKICAgICAgICBmaWxsPSIjM0RBOEY1Ij48L3BhdGg+Cjwvc3ZnPg==");
-            }
-        </style>
-    <title>如何基于Hexo建立自己的博客网站</title></head>
-    <body>
-        <div id="page"><div id="title">如何基于Hexo建立自己的博客网站</div><p data-key="62b40e078e0a81001254332b" data-type="paragraph"><strong>标签：</strong><span style="color: #A6A6A6">建站、博客</span></p><p data-key="62c5ad390f38ae0012fb91ba" data-type="paragraph"><strong>作者：</strong><span style="color: #A6A6A6">邱昀晁</span></p><p data-key="62b40e078e0a81001254332c" data-type="paragraph"><strong>发布时间：</strong><span data-key="thoughts-779500" data-type="DATE">2022-07-06</span></p><p data-key="62b40e078e0a81001254332f" data-type="paragraph"></p><h1 data-key="62b40e078e0a810012543330" data-type="header-one">什么是Hexo</h1><p data-key="62c25f3b01562a0012d9d2da" data-type="paragraph"><span style="color: #444444"><span style="background: #FFFFFF">Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 </span></span><a data-key="thoughts-779501" data-type="LINK" href="http://daringfireball.net/projects/markdown/">Markdown</a><span style="color: #444444"><span style="background: #FFFFFF">（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</span></span><strong><span style="color: #444444"><span style="background: #FFFFFF">官网地址：</span></span></strong></p><p data-key="62c25f6301562a0012d9d2db" data-type="embed"><a href="https://hexo.io/zh-cn/index.html">https://hexo.io/zh-cn/index.html</a></p><p data-key="62b40e078e0a810012543332" data-type="paragraph"></p><h2 data-key="62c2602101562a0012d9d38c" data-type="header-two">安装前提</h2><p data-key="62c2600d01562a0012d9d37d" data-type="paragraph">安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p><ul data-key="thoughts-779504" data-type="unordered-list-wrapper"><li data-key="thoughts-779481" data-type="unordered-list-item"><a data-key="thoughts-779502" data-type="LINK" href="http://nodejs.org/">Node.js</a> (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</li><li data-key="thoughts-779482" data-type="unordered-list-item"><a data-key="thoughts-779503" data-type="LINK" href="http://git-scm.com/">Git</a></li></ul><p data-key="62c2600d01562a0012d9d37f" data-type="paragraph">如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 <a data-key="thoughts-779505" data-type="LINK" href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo">安装 Hexo</a> 步骤。</p><p data-key="62c2600d01562a0012d9d380" data-type="paragraph">如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。</p><p data-key="62c2615701562a0012d9d4cd" data-type="paragraph"></p><h2 data-key="62c2600d01562a0012d9d381" data-type="header-two">安装 Git</h2><ul data-key="thoughts-779510" data-type="unordered-list-wrapper"><li data-key="thoughts-779483" data-type="unordered-list-item">Windows：下载并安装 <a data-key="thoughts-779506" data-type="LINK" href="https://git-scm.com/download/win">git</a>.</li><li data-key="thoughts-779484" data-type="unordered-list-item">Mac：使用 <a data-key="thoughts-779507" data-type="LINK" href="http://mxcl.github.com/homebrew/">Homebrew</a>, <a data-key="thoughts-779508" data-type="LINK" href="http://www.macports.org/">MacPorts</a> 或者下载 <a data-key="thoughts-779509" data-type="LINK" href="http://sourceforge.net/projects/git-osx-installer/">安装程序</a>。</li><li data-key="thoughts-779485" data-type="unordered-list-item">Linux (Ubuntu, Debian)：<span style="color: #6e74e0"><code>sudo apt-get install git-core</code></span></li><li data-key="thoughts-779486" data-type="unordered-list-item">Linux (Fedora, Red Hat, CentOS)：<span style="color: #6e74e0"><code>sudo yum install git-core</code></span></li></ul><blockquote data-key="62c2600d01562a0012d9d383" data-type="blockquote-wrapper"><p data-key="thoughts-779487" data-type="blockquote">如果在编译时可能会遇到问题，请先到 App Store 安装 Xcode，Xcode 完成后，启动并进入 <strong>Preferences -&gt; Download -&gt; Command Line Tools -&gt; Install</strong> 安装命令行工具。</p><p data-key="thoughts-779488" data-type="blockquote">对于中国大陆地区用户，可以前往  下载 git 安装包。</p></blockquote><p data-key="62c2600d01562a0012d9d384" data-type="paragraph"></p><h2 data-key="62c2605801562a0012d9d38e" data-type="header-two">安装 Node.js</h2><p data-key="62c2600d01562a0012d9d385" data-type="paragraph">Node.js 为大多数平台提供了官方的 <a data-key="thoughts-779511" data-type="LINK" href="https://nodejs.org/en/download/">安装程序</a>。对于中国大陆地区用户，可以前往 <a data-key="thoughts-779512" data-type="LINK" href="https://npm.taobao.org/mirrors/node">淘宝 Node.js 镜像</a> 下载。</p><p data-key="62c2600d01562a0012d9d386" data-type="paragraph">其它的安装方法：</p><ul data-key="thoughts-779519" data-type="unordered-list-wrapper"><li data-key="thoughts-779489" data-type="unordered-list-item">Windows：通过 <a data-key="thoughts-779513" data-type="LINK" href="https://github.com/jasongin/nvs/">nvs</a>（推荐）或者 <a data-key="thoughts-779514" data-type="LINK" href="https://github.com/nvm-sh/nvm">nvm</a> 安装。</li><li data-key="thoughts-779490" data-type="unordered-list-item">Mac：使用 <a data-key="thoughts-779515" data-type="LINK" href="https://brew.sh/">Homebrew</a> 或 <a data-key="thoughts-779516" data-type="LINK" href="http://www.macports.org/">MacPorts</a> 安装。</li><li data-key="thoughts-779491" data-type="unordered-list-item">Linux（DEB/RPM-based）：从 <a data-key="thoughts-779517" data-type="LINK" href="https://github.com/nodesource/distributions">NodeSource</a> 安装。</li><li data-key="thoughts-779492" data-type="unordered-list-item">其它：使用相应的软件包管理器进行安装，可以参考由 Node.js 提供的 <a data-key="thoughts-779518" data-type="LINK" href="https://nodejs.org/en/download/package-manager/">指导</a>。</li></ul><p data-key="62c2600d01562a0012d9d388" data-type="paragraph">对于 Mac 和 Linux 同样建议使用 nvs 或者 nvm，以避免可能会出现的权限问题。</p><blockquote data-key="62c2608501562a0012d9d392" data-type="blockquote-wrapper"><p data-key="thoughts-779493" data-type="blockquote">使用 Node.js 官方安装程序时，请确保勾选 <strong>Add to PATH</strong> 选项（默认已勾选）</p></blockquote><p data-key="62c2607101562a0012d9d390" data-type="paragraph"></p><h2 data-key="62c260c101562a0012d9d394" data-type="header-two">安装 Hexo</h2><p data-key="62c260c101562a0012d9d395" data-type="paragraph">所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</p><pre data-key="62c2610c01562a0012d9d3a2" data-type="code-wrapper"><code data-key="thoughts-779494" data-type="code-block">$ npm install -g hexo-cli</code></pre><h2 data-key="62c260c101562a0012d9d397" data-type="header-two">进阶安装和使用</h2><p data-key="62c260c101562a0012d9d398" data-type="paragraph">对于熟悉 npm 的进阶用户，可以仅局部安装 <code>hexo</code> 包。</p><pre data-key="62c2613901562a0012d9d3a7" data-type="code-wrapper"><code data-key="thoughts-779495" data-type="code-block">$ npm install hexo</code></pre><p data-key="62c260c101562a0012d9d39a" data-type="paragraph">安装以后，可以使用以下两种方式执行 Hexo：</p><ol data-key="thoughts-779520" data-type="ordered-list-wrapper"><li data-key="thoughts-779496" data-type="ordered-list-item"><span style="color: #6e74e0"><code>npx hexo &lt;command&gt;</code></span></li><li data-key="thoughts-779497" data-type="ordered-list-item">将 Hexo 所在的目录下的 <code>node_modules</code> 添加到环境变量之中即可直接使用 <span style="color: #6e74e0"><code>hexo &lt;command&gt;</code></span>：</li></ol><pre data-key="62c2614801562a0012d9d4cc" data-type="code-wrapper"><code data-key="thoughts-779498" data-type="code-block">echo 'PATH="$PATH:./node_modules/.bin"' &gt;&gt; ~/.profile</code></pre><p data-key="62c260c101562a0012d9d39d" data-type="paragraph"></p><h1 data-key="62c2616601562a0012d9d4ce" data-type="header-one">实际搭建Hexo博客</h1><p data-key="62c2600d01562a0012d9d38b" data-type="paragraph">Hexo安装结束后，下面我们开始实际博客项目的搭建。</p><h2 data-key="62c2622901562a0012d9d4d2" data-type="header-two">创建项目</h2><p data-key="62c2622901562a0012d9d4d3" data-type="paragraph">使用<span style="color: #6e74e0"><code>hexo init</code></span>初始化项目，我这里项目名称是 <span style="color: #fa8c15">hexo-qblog</span>，如下：</p><img data-key="62c4e0f06d4028001222f0d7" data-type="image" src="./62c4e0f06d4028001222f0d7.png" alt="image.png"><p data-key="62c4e1186d4028001222f0d9" data-type="paragraph">初始化的时候可能会有一个报错，是自动安装依赖失败，关系不大，进入项目目录<span style="color: #fa8c15">hexo-qblog</span>用命令<code><span style="color: #6e74e0">npm install</span></code>自己安装一下就行，如下：</p><img data-key="62c264d101562a0012d9d4de" data-type="image" src="./62c264d101562a0012d9d4de.png" alt="image.png"><p data-key="62c2a6ce05c1360012bcb8c0" data-type="paragraph"></p><h2 data-key="62c2a6ce05c1360012bcb8c1" data-type="header-two">运行项目</h2><p data-key="62c2a6dd05c1360012bcb8c3" data-type="paragraph">使用<span style="color: #6e74e0"><code>hexo server --debug</code></span>运行本地项目，<span style="color: #6e74e0"><code>--debug</code></span> 是输出调试日志：</p><img data-key="62c2efd93dd45800126f0bf2" data-type="image" src="./62c2efd93dd45800126f0bf2.png" alt="image.png"><p data-key="62c2a6ce05c1360012bcb8c2" data-type="paragraph">在日志的最后面会显示本地调试地址：</p><img data-key="62c2660201562a0012d9d4e6" data-type="image" src="./62c2660201562a0012d9d4e6.png" alt="image.png"><p data-key="62c2660201562a0012d9d4e7" data-type="paragraph">然后我们在浏览器打开本地地址<a data-key="thoughts-779521" data-type="LINK" href="http://localhost:4000/"><u>http://localhost:4000/</u></a>，就可以看到自己的一个默认主题的博客了：</p><img data-key="62c2f0793dd45800126f0bf5" data-type="image" src="./62c2f0793dd45800126f0bf5.png" alt="image.png"><p data-key="62c2f0063dd45800126f0bf3" data-type="paragraph"></p><h2 data-key="62c2f0973dd45800126f0bf6" data-type="header-two">更换主题</h2><p data-key="62c2f0ba3dd45800126f0bf7" data-type="paragraph">前面说过，Hexo可以<span style="background: #FFFFFF">利用靓丽的主题生成静态网页，达到非常酷炫的网页效果，上面的默认主题也是比较丑的，所以我们给我们的博客先换个漂亮的主题。</span></p><img data-key="62c2f1f13dd45800126f0bfa" data-type="image" src="./62c2f1f13dd45800126f0bfa.png" alt="image.png"><p data-key="62c2f1153dd45800126f0bf9" data-type="paragraph">在官网中有非常多的主题供我们选择，这里我选了一个比较卡通可爱风的主题，叫做 <a data-key="thoughts-779522" data-type="LINK" href="https://github.com/tangyuxian/hexo-theme-tangyuxian">hexo-theme-tangyuxian</a>，这个主题在GitHub上也有开源，感兴趣的小伙伴可以点击去看看。</p><p data-key="62c2f23c3dd45800126f0bff" data-type="paragraph">我们先看看主题效果：</p><img data-key="62c2f2503dd45800126f0c01" data-type="image" src="./62c2f2503dd45800126f0c01.png" alt="image.png"><p data-key="62c2f25f3dd45800126f0c02" data-type="paragraph">非常地可爱但又酷炫，下面把它运用到我们自己的博客上面来。</p><p data-key="62c2f28c3dd45800126f0c03" data-type="paragraph"></p><h3 data-key="62c2f28c3dd45800126f0c04" data-type="header-three">clone项目</h3><pre data-key="62c2f40d3dd45800126f0c0c" data-type="code-wrapper"><code data-key="thoughts-779499" data-type="code-block">git clone https://github.com/tangyuxian/hexo-theme-tangyuxian.git</code></pre><p data-key="62c2f3e03dd45800126f0c08" data-type="paragraph">clone下的项目如下，上面是前面新建的Hexo项目hexo-qblog，下面是主题项目：</p><img data-key="62c5a4730f38ae0012fb9177" data-type="image" src="./62c5a4730f38ae0012fb9177.png" alt="image.png"><p data-key="62c507aa54cef50012082368" data-type="paragraph">将 <span style="color: #e62412">hexo-theme-tangyuxian</span> 重命名为 <span style="color: #e62412">tangyuxian</span>：</p><img data-key="62c5a4d20f38ae0012fb917a" data-type="image" src="./62c5a4d20f38ae0012fb917a.png" alt="image.png"><p data-key="62c5a4910f38ae0012fb9178" data-type="paragraph">然后将 <span style="color: #e62412">tangyuxian</span> 整个文件夹复制到 <span style="color: #e62412">hexo-qblog\themes</span> 文件夹下面，如下图：</p><img data-key="62c5a9830f38ae0012fb9185" data-type="image" src="./62c5a9830f38ae0012fb9185.png" alt="image.png"><p data-key="62c5072354cef5001208235c" data-type="paragraph">然后进入<span style="color: #e62412">hexo-theme-tangyuxian </span>文件夹删除 <span style="color: #e62412">.git </span>目录，并复制 <span style="color: #1b9aee">_config.yml</span> 文件：</p><img data-key="62c5084a54cef5001208236a" data-type="image" src="./62c5084a54cef5001208236a.png" alt="image.png"><p data-key="62c5085954cef5001208236b" data-type="paragraph">将上面复制的文件 <span style="color: #1b9aee">_config.yml </span>粘贴到项目根目录 <span style="color: #e62412">hexo-qblog </span>文件夹下面，并重命名为<span style="color: #1b9aee">_config.tangyuxian.yml</span>，表示这是 tangyuxian 主题的配置文件：</p><img data-key="62c5a9fb0f38ae0012fb918c" data-type="image" src="./62c5a9fb0f38ae0012fb918c.png" alt="image.png"><p data-key="62c5aa0a0f38ae0012fb918d" data-type="paragraph">打开 <span style="color: #e62412">hexo-qblog</span> 整个项目文件夹（我这里是用VS Code），修改项目根目录下的 <span style="color: #e62412">_config.yml</span> 文件，找到文件 <span style="color: #569CD6">theme </span>字段，修改为<span style="color: #569CD6"> tangyuxian</span>：</p><img data-key="62c5aab90f38ae0012fb9191" data-type="image" src="./62c5aab90f38ae0012fb9191.png" alt="image.png"><img data-key="62c5aad70f38ae0012fb9194" data-type="image" src="./62c5aad70f38ae0012fb9194.png" alt="image.png"><p data-key="62c5aad70f38ae0012fb9195" data-type="paragraph">这样整个主题就更换完成了，另外由于主题默认已经集成了文章【字数统计】、【阅读时长】统计功能，需要WordCount的支持，运行如下命令安装<span style="color: #6e74e0"><code>npm i --save hexo-wordcount</code></span>：</p><img data-key="62c5ac0d0f38ae0012fb919f" data-type="image" src="./62c5ac0d0f38ae0012fb919f.png" alt="image.png"><p data-key="62c5abd10f38ae0012fb9198" data-type="paragraph">下面就可以按照前文所说运行项目了<span style="color: #6e74e0"><code>hexo server --debug</code></span>：</p><img data-key="62c5acb70f38ae0012fb91b8" data-type="image" src="./62c5acb70f38ae0012fb91b8.png" alt="image.png"><p data-key="62c5ac7b0f38ae0012fb91b5" data-type="paragraph"></p><p data-key="62c5acb70f38ae0012fb91b9" data-type="paragraph">然后打开<a data-key="thoughts-779523" data-type="LINK" href="http://localhost:4000/"><u>http://localhost:4000/</u></a>就会发现我们的主题已经焕然一新了：</p><img data-key="62c5ac990f38ae0012fb91b7" data-type="image" src="./62c5ac990f38ae0012fb91b7.png" alt="image.png"><p data-key="62c5ac7b0f38ae0012fb91b6" data-type="paragraph"></p><p data-key="62c5ab180f38ae0012fb9197" data-type="paragraph">关于使用Hexo创建自己的博客项目并更换好看的主题就介绍完了，下期我们将介绍如何发布自己的博客，非常感谢大家的阅读。</p><hr data-key="62c25f9001562a0012d9d2dd" data-type="hr"><p data-key="62b40e078e0a810012543334" data-type="paragraph"></p><p data-key="62b40e078e0a810012543335" data-type="paragraph"></p><p data-key="62b40e078e0a810012543336" data-type="paragraph"><br></p></div>
+**标签：**建站、Hexo、博客
 
-        <footer>
-            <a href="https://thoughts.teambition.com/" target="_blank">Thoughts</a>
-        </footer>
-    
+**作者：**邱昀晁
 
-</body></html>
+**发布时间：**2022-07-06
+
+# 什么是Hexo
+
+Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](http://daringfireball.net/projects/markdown/)（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。**官网地址：**[Hexo](https://hexo.io/zh-cn/index.html)
+
+## 安装前提
+
+安装 Hexo 相当简单，只需要先安装下列应用程序即可：
+
+-  [Node.js](http://nodejs.org/) (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本) 
+-  [Git](http://git-scm.com/) 
+
+如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 [安装 Hexo](https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo) 步骤。
+
+如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。
+
+## 安装 Git
+
+-  Windows：下载并安装 [git](https://git-scm.com/download/win). 
+-  Mac：使用 [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) 或者下载 [安装程序](http://sourceforge.net/projects/git-osx-installer/)。 
+-  Linux (Ubuntu, Debian)：`sudo apt-get install git-core` 
+-  Linux (Fedora, Red Hat, CentOS)：`sudo yum install git-core` 
+
+> 如果在编译时可能会遇到问题，请先到 App Store 安装 Xcode，Xcode 完成后，启动并进入 **Preferences -> Download -> Command Line Tools -> Install** 安装命令行工具。
+
+
+> 对于中国大陆地区用户，可以前往  下载 git 安装包。
+
+
+## 安装 Node.js
+
+Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/en/download/)。对于中国大陆地区用户，可以前往 [淘宝 Node.js 镜像](https://npm.taobao.org/mirrors/node) 下载。
+
+其它的安装方法：
+
+-  Windows：通过 [nvs](https://github.com/jasongin/nvs/)（推荐）或者 [nvm](https://github.com/nvm-sh/nvm) 安装。 
+-  Mac：使用 [Homebrew](https://brew.sh/) 或 [MacPorts](http://www.macports.org/) 安装。 
+-  Linux（DEB/RPM-based）：从 [NodeSource](https://github.com/nodesource/distributions) 安装。 
+-  其它：使用相应的软件包管理器进行安装，可以参考由 Node.js 提供的 [指导](https://nodejs.org/en/download/package-manager/)。 
+
+对于 Mac 和 Linux 同样建议使用 nvs 或者 nvm，以避免可能会出现的权限问题。
+
+> 使用 Node.js 官方安装程序时，请确保勾选 **Add to PATH** 选项（默认已勾选）
+
+
+## 安装 Hexo
+
+所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
+
+```shell
+$ npm install -g hexo-cli
+```
+
+## 进阶安装和使用
+
+对于熟悉 npm 的进阶用户，可以仅局部安装 `hexo` 包。
+
+```shell
+$ npm install hexo
+```
+
+安装以后，可以使用以下两种方式执行 Hexo：
+
+1.  `npx hexo <command>` 
+2.  将 Hexo 所在的目录下的 `node_modules` 添加到环境变量之中即可直接使用 `hexo <command>`： 
+
+```shell
+echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
+```
+
+# 实际搭建Hexo博客
+
+Hexo安装结束后，下面我们开始实际博客项目的搭建。
+
+## 创建项目
+
+使用`hexo init`初始化项目，我这里项目名称是 hexo-qblog，如下：
+
+![](https://tcs.teambition.net/storage/312j9ef3f813b25a9de82eded978683c2452?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmo5ZWYzZjgxM2IyNWE5ZGU4MmVkZWQ5Nzg2ODNjMjQ1MiJ9.4voi9IB_rTwKnytIvr9w0xudynLjVTBnbmL56t33DWA&download=image.png#crop=0&crop=0&crop=1&crop=1&id=ogjSl&originHeight=219&originWidth=868&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+初始化的时候可能会有一个报错，是自动安装依赖失败，关系不大，进入项目目录hexo-qblog用命令`npm install`自己安装一下就行，如下：
+
+![](https://tcs.teambition.net/storage/312j443d35718a0d106be6fe260f1341ecc6?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmo0NDNkMzU3MThhMGQxMDZiZTZmZTI2MGYxMzQxZWNjNiJ9.A6zsxyAMcXjg-err80QVII6FXyuTnCNzSKIc3DL33kU&download=image.png#crop=0&crop=0&crop=1&crop=1&id=BIyDD&originHeight=429&originWidth=1000&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+## 运行项目
+
+使用`hexo server --debug`运行本地项目，`--debug` 是输出调试日志：
+
+![](https://tcs.teambition.net/storage/312j3a349ee847ea0ce157d30f7054a9b17e?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmozYTM0OWVlODQ3ZWEwY2UxNTdkMzBmNzA1NGE5YjE3ZSJ9.ayRI6qdaAk5DxRnp5oRfnMTpyl3eooBrK4AYyW3bEJw&download=image.png#crop=0&crop=0&crop=1&crop=1&id=hVTAT&originHeight=350&originWidth=855&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+在日志的最后面会显示本地调试地址：
+
+![](https://tcs.teambition.net/storage/312j1f3bc19d159f7582d171aee4a63a43b7?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmoxZjNiYzE5ZDE1OWY3NTgyZDE3MWFlZTRhNjNhNDNiNyJ9.GscguuUIfatqZCbJbEwYtsZ_t9_4pZaW69JqHL6ha08&download=image.png#crop=0&crop=0&crop=1&crop=1&id=FRih8&originHeight=238&originWidth=900&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+然后我们在浏览器打开本地地址[**http://localhost:4000/**](http://localhost:4000/)，就可以看到自己的一个默认主题的博客了：
+
+![](https://tcs.teambition.net/storage/312je79c75685dc613f23d4a10c076ef5fa6?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmplNzljNzU2ODVkYzYxM2YyM2Q0YTEwYzA3NmVmNWZhNiJ9.M-TVEYKOenfxilnDiybtcTECrcPOdWgYrr6IR5noNi0&download=image.png#crop=0&crop=0&crop=1&crop=1&id=U9EVh&originHeight=1000&originWidth=1920&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+## 更换主题
+
+前面说过，Hexo可以利用靓丽的主题生成静态网页，达到非常酷炫的网页效果，上面的默认主题也是比较丑的，所以我们给我们的博客先换个漂亮的主题。
+
+![](https://tcs.teambition.net/storage/312j46b24fa0c733468076f402a8d9f5cde0?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmo0NmIyNGZhMGM3MzM0NjgwNzZmNDAyYThkOWY1Y2RlMCJ9.WWpEBaCZ1A6U0p9_PTXSAroqLKy1JSkndTlxCHQbFps&download=image.png#crop=0&crop=0&crop=1&crop=1&id=U6G1g&originHeight=893&originWidth=1202&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+在官网中有非常多的主题供我们选择，这里我选了一个比较卡通可爱风的主题，叫做 [hexo-theme-tangyuxian](https://github.com/tangyuxian/hexo-theme-tangyuxian)，这个主题在GitHub上也有开源，感兴趣的小伙伴可以点击去看看。
+
+我们先看看主题效果：
+
+![](https://tcs.teambition.net/storage/312jb301ae0e6f284f5ec12745937add0c70?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmpiMzAxYWUwZTZmMjg0ZjVlYzEyNzQ1OTM3YWRkMGM3MCJ9.DtsUWITCS-139RPtCNz0z96Q4mP-cl9D7dCkEtvPJTM&download=image.png#crop=0&crop=0&crop=1&crop=1&id=fudFk&originHeight=959&originWidth=1920&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+非常地可爱但又酷炫，下面把它运用到我们自己的博客上面来。
+
+### clone项目
+
+```shell
+git clone https://github.com/tangyuxian/hexo-theme-tangyuxian.git
+```
+
+clone下的项目如下，上面是前面新建的Hexo项目hexo-qblog，下面是主题项目：
+
+![](https://tcs.teambition.net/storage/312j7153d07af99f5dd030c3fc89840ff439?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmo3MTUzZDA3YWY5OWY1ZGQwMzBjM2ZjODk4NDBmZjQzOSJ9.fAevEdtJyzi3ejPce4JxT5jL0tZth-KholdDI9v56o4&download=image.png#crop=0&crop=0&crop=1&crop=1&id=sJgfN&originHeight=281&originWidth=1014&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+将 hexo-theme-tangyuxian 重命名为 tangyuxian：
+
+![](https://tcs.teambition.net/storage/312j883800c2662ca4827f7b8091d086e679?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmo4ODM4MDBjMjY2MmNhNDgyN2Y3YjgwOTFkMDg2ZTY3OSJ9.cU4JDnLcHay3_7VmTl3sPwJI_r2zG0Mpyl2LqLFOQ4w&download=image.png#crop=0&crop=0&crop=1&crop=1&id=xx80q&originHeight=268&originWidth=974&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+然后将 tangyuxian 整个文件夹复制到 hexo-qblog\themes 文件夹下面，如下图：
+
+![](https://tcs.teambition.net/storage/312j3ed0cb8ee26d87ef5ce81b90d18f65f2?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmozZWQwY2I4ZWUyNmQ4N2VmNWNlODFiOTBkMThmNjVmMiJ9.b1iAscqOTl79-jAo7zV-DCqwyLGqZeYAJfUh2pV99N0&download=image.png#crop=0&crop=0&crop=1&crop=1&id=W4hoA&originHeight=255&originWidth=999&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+然后进入hexo-theme-tangyuxian 文件夹删除 .git 目录，并复制 _config.yml 文件：
+
+![](https://tcs.teambition.net/storage/312j09943e0630ef456b25d3fdb65560fca6?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmowOTk0M2UwNjMwZWY0NTZiMjVkM2ZkYjY1NTYwZmNhNiJ9.fWEZ-gm3-YgQNxkKl3J2T-B6aaW6u7uL53fYPw-CCAY&download=image.png#crop=0&crop=0&crop=1&crop=1&id=EVAjL&originHeight=412&originWidth=1019&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+将上面复制的文件 _config.yml 粘贴到项目根目录 hexo-qblog 文件夹下面，并重命名为_config.tangyuxian.yml，表示这是 tangyuxian 主题的配置文件：
+
+![](https://tcs.teambition.net/storage/312j834872a69fccbf595a2a3fec3e11e285?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmo4MzQ4NzJhNjlmY2NiZjU5NWEyYTNmZWMzZTExZTI4NSJ9.Y0YXg4UelB_PalnvkSouZOQ1lV1P3GROVYjG3-dH9vY&download=image.png#crop=0&crop=0&crop=1&crop=1&id=ggjY8&originHeight=396&originWidth=986&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+打开 hexo-qblog 整个项目文件夹（我这里是用VS Code），修改项目根目录下的 _config.yml 文件，找到文件 theme 字段，修改为 tangyuxian：
+
+![](https://tcs.teambition.net/storage/312jd2dd6a2df9aa79d2905a8dd8bcc9e275?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmpkMmRkNmEyZGY5YWE3OWQyOTA1YThkZDhiY2M5ZTI3NSJ9.Me8qEByxuYzJssC5TkxUwTrhlrtyFdVLqD3BWS44htg&download=image.png#crop=0&crop=0&crop=1&crop=1&id=K5rwW&originHeight=1030&originWidth=1920&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+![](https://tcs.teambition.net/storage/312j34aff379590e0a9d023c699a9765c891?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmozNGFmZjM3OTU5MGUwYTlkMDIzYzY5OWE5NzY1Yzg5MSJ9.Yh3cAKAys9qGEohPeHO5HQ0QVIqFI1EAuahHQ6RiKAA&download=image.png#crop=0&crop=0&crop=1&crop=1&id=ljxxV&originHeight=1030&originWidth=1920&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+这样整个主题就更换完成了，另外由于主题默认已经集成了文章【字数统计】、【阅读时长】统计功能，需要WordCount的支持，运行如下命令安装`npm i --save hexo-wordcount`：
+
+![](https://tcs.teambition.net/storage/312j187e681a44144a6ef30c4f0c268b91fb?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmoxODdlNjgxYTQ0MTQ0YTZlZjMwYzRmMGMyNjhiOTFmYiJ9.cOWJNexpJawsGg51YQlLCKtMfjuNAD6uADza3Jh56bY&download=image.png#crop=0&crop=0&crop=1&crop=1&id=ShNbB&originHeight=363&originWidth=847&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+下面就可以按照前文所说运行项目了`hexo server --debug`：
+
+![](https://tcs.teambition.net/storage/312j93273f040f455b3bd15efc0bacf1ece2?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmo5MzI3M2YwNDBmNDU1YjNiZDE1ZWZjMGJhY2YxZWNlMiJ9._zHbtc8oI6oTbs_brObEnk9zOiQW8Td1ApBvz2bbHX8&download=image.png#crop=0&crop=0&crop=1&crop=1&id=HIzvJ&originHeight=360&originWidth=1199&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+然后打开[**http://localhost:4000/**](http://localhost:4000/)就会发现我们的主题已经焕然一新了：
+
+![](https://tcs.teambition.net/storage/312j7285d87e368cf4feed6fdbaaaa21c74d?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmo3Mjg1ZDg3ZTM2OGNmNGZlZWQ2ZmRiYWFhYTIxYzc0ZCJ9.inc6flPjQ-WVW4S_0tD0Txw2ODiZAHHwSXXSVCm_hbE&download=image.png#crop=0&crop=0&crop=1&crop=1&id=CwL5O&originHeight=992&originWidth=1920&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+
+关于使用Hexo创建自己的博客项目并更换好看的主题就介绍完了，下期我们将介绍如何发布自己的博客，非常感谢大家的阅读。
+
+---
+
