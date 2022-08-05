@@ -15,10 +15,12 @@ tags:
 
 **发布时间：**2022-07-06
 
+<a name="15935252"></a>
 # 什么是Hexo
 
 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](http://daringfireball.net/projects/markdown/)（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。**官网地址：**[Hexo](https://hexo.io/zh-cn/index.html)
 
+<a name="6faa3e4a"></a>
 ## 安装前提
 
 安装 Hexo 相当简单，只需要先安装下列应用程序即可：
@@ -30,6 +32,7 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 
 如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。
 
+<a name="d9787e5d"></a>
 ## 安装 Git
 
 -  Windows：下载并安装 [git](https://git-scm.com/download/win). 
@@ -43,6 +46,7 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 > 对于中国大陆地区用户，可以前往  下载 git 安装包。
 
 
+<a name="8ce7a425"></a>
 ## 安装 Node.js
 
 Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/en/download/)。对于中国大陆地区用户，可以前往 [淘宝 Node.js 镜像](https://npm.taobao.org/mirrors/node) 下载。
@@ -59,6 +63,7 @@ Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/e
 > 使用 Node.js 官方安装程序时，请确保勾选 **Add to PATH** 选项（默认已勾选）
 
 
+<a name="5eb35f54"></a>
 ## 安装 Hexo
 
 所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
@@ -67,6 +72,7 @@ Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/e
 $ npm install -g hexo-cli
 ```
 
+<a name="a10ec5bf"></a>
 ## 进阶安装和使用
 
 对于熟悉 npm 的进阶用户，可以仅局部安装 `hexo` 包。
@@ -84,48 +90,53 @@ $ npm install hexo
 echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
 ```
 
+<a name="3aa76d26"></a>
 # 实际搭建Hexo博客
 
 Hexo安装结束后，下面我们开始实际博客项目的搭建。
 
+<a name="39da6755"></a>
 ## 创建项目
 
 使用`hexo init`初始化项目，我这里项目名称是 hexo-qblog，如下：
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312j9ef3f813b25a9de82eded978683c2452%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmo5ZWYzZjgxM2IyNWE5ZGU4MmVkZWQ5Nzg2ODNjMjQ1MiJ9.4voi9IB_rTwKnytIvr9w0xudynLjVTBnbmL56t33DWA%26download%3Dimage.png&sign=d612c21828556c21a6baed20e28b7164fc0c9fd6fccc767d880ba3ba21358d9a)
+![1405cf50-ca0b-4750-82e2-677161463fb0.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681379034-3716f265-76a1-4f5b-a60b-1573a1513b6a.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=219&id=u099642f6&name=1405cf50-ca0b-4750-82e2-677161463fb0.png&originHeight=219&originWidth=868&originalType=binary&ratio=1&rotation=0&showTitle=false&size=37217&status=done&style=none&taskId=u55c9a93b-950c-4dc1-8a93-95200e7fd76&title=&width=868)
 
 初始化的时候可能会有一个报错，是自动安装依赖失败，关系不大，进入项目目录hexo-qblog用命令`npm install`自己安装一下就行，如下：
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312j443d35718a0d106be6fe260f1341ecc6%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmo0NDNkMzU3MThhMGQxMDZiZTZmZTI2MGYxMzQxZWNjNiJ9.A6zsxyAMcXjg-err80QVII6FXyuTnCNzSKIc3DL33kU%26download%3Dimage.png&sign=9e91802db54508215ba1d7479a26d55491fb680e06539e8ad8f49ae6a0841bfc)
+![b691ce25-9e7c-4204-82e4-8d635ae0c42b.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681481903-cb2424ec-eed8-41c5-8fce-0ebe0e834bec.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=429&id=u9d1f03f5&name=b691ce25-9e7c-4204-82e4-8d635ae0c42b.png&originHeight=429&originWidth=1000&originalType=binary&ratio=1&rotation=0&showTitle=false&size=69711&status=done&style=none&taskId=u3acf57e9-c461-4024-b3ba-dc22b5874ea&title=&width=1000)
 
+<a name="fa4aa1b9"></a>
 ## 运行项目
 
 使用`hexo server --debug`运行本地项目，`--debug` 是输出调试日志：
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312j3a349ee847ea0ce157d30f7054a9b17e%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmozYTM0OWVlODQ3ZWEwY2UxNTdkMzBmNzA1NGE5YjE3ZSJ9.ayRI6qdaAk5DxRnp5oRfnMTpyl3eooBrK4AYyW3bEJw%26download%3Dimage.png&sign=7e249e0182b11c48e3393e5848b38d8e3ef0039799cda53e8bbeeb5df2dbe3bd)
+![00b61fc5-72db-4a6b-a2bc-89bd7ac5e31d.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681504350-2fe767b6-d7d8-4d32-a557-bb91d42b890b.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=350&id=uad96d5df&name=00b61fc5-72db-4a6b-a2bc-89bd7ac5e31d.png&originHeight=350&originWidth=855&originalType=binary&ratio=1&rotation=0&showTitle=false&size=86587&status=done&style=none&taskId=u6fd52373-ef20-407f-8935-464a4862bbd&title=&width=855)
 
 在日志的最后面会显示本地调试地址：
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312j1f3bc19d159f7582d171aee4a63a43b7%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmoxZjNiYzE5ZDE1OWY3NTgyZDE3MWFlZTRhNjNhNDNiNyJ9.GscguuUIfatqZCbJbEwYtsZ_t9_4pZaW69JqHL6ha08%26download%3Dimage.png&sign=a4744449de67263b96a8771c05fec7be3e8b2513b3d2622943ae9a46f29edd49)
+![5e8b86b9-c65c-4de1-acd4-e5aa78a30f2f.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681523219-f94aee1a-8b30-426d-9b7b-83eff45ab6de.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=238&id=ub92d7f2f&name=5e8b86b9-c65c-4de1-acd4-e5aa78a30f2f.png&originHeight=238&originWidth=900&originalType=binary&ratio=1&rotation=0&showTitle=false&size=53753&status=done&style=none&taskId=u6784a905-7637-4feb-a8bc-52e306d9335&title=&width=900)
 
 然后我们在浏览器打开本地地址[**http://localhost:4000/**](http://localhost:4000/)，就可以看到自己的一个默认主题的博客了：
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312je79c75685dc613f23d4a10c076ef5fa6%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmplNzljNzU2ODVkYzYxM2YyM2Q0YTEwYzA3NmVmNWZhNiJ9.M-TVEYKOenfxilnDiybtcTECrcPOdWgYrr6IR5noNi0%26download%3Dimage.png&sign=21c64c93314d7842f3413ac2d31c4ebec280791f82c8b8330a1e42a707c6330b)
+![7417b072-32ee-4a7c-8ce9-3ff2b0acec88.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681545230-df01e9f2-8411-4538-80e5-53c2d7288e5e.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=1000&id=ub2bbb600&name=7417b072-32ee-4a7c-8ce9-3ff2b0acec88.png&originHeight=1000&originWidth=1920&originalType=binary&ratio=1&rotation=0&showTitle=false&size=413264&status=done&style=none&taskId=u0a870313-2332-4df7-b7f9-5df3e6c2c14&title=&width=1920)
 
+<a name="8e4a4d48"></a>
 ## 更换主题
 
 前面说过，Hexo可以利用靓丽的主题生成静态网页，达到非常酷炫的网页效果，上面的默认主题也是比较丑的，所以我们给我们的博客先换个漂亮的主题。
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312j46b24fa0c733468076f402a8d9f5cde0%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmo0NmIyNGZhMGM3MzM0NjgwNzZmNDAyYThkOWY1Y2RlMCJ9.WWpEBaCZ1A6U0p9_PTXSAroqLKy1JSkndTlxCHQbFps%26download%3Dimage.png&sign=71ebaa7c0c687e20370df6af9d082eda98f74913ef75776c0e6389aebcba9660)
+![0de3cc28-6261-406b-a114-f5f25d6a4c43.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681562163-72a0335b-d8d0-43e7-9532-e1b94a03f3ec.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=893&id=u316bcde3&name=0de3cc28-6261-406b-a114-f5f25d6a4c43.png&originHeight=893&originWidth=1202&originalType=binary&ratio=1&rotation=0&showTitle=false&size=412588&status=done&style=none&taskId=u5f9f853b-a316-470f-8796-ac73ce88e02&title=&width=1202)
 
 在官网中有非常多的主题供我们选择，这里我选了一个比较卡通可爱风的主题，叫做 [hexo-theme-tangyuxian](https://github.com/tangyuxian/hexo-theme-tangyuxian)，这个主题在GitHub上也有开源，感兴趣的小伙伴可以点击去看看。
 
 我们先看看主题效果：
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312jb301ae0e6f284f5ec12745937add0c70%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmpiMzAxYWUwZTZmMjg0ZjVlYzEyNzQ1OTM3YWRkMGM3MCJ9.DtsUWITCS-139RPtCNz0z96Q4mP-cl9D7dCkEtvPJTM%26download%3Dimage.png&sign=e55f8516b4856906035669e7f4426da2a297d8ad2d2ad885258b2efe13261609)
+![bf3733a5-5ca2-4f21-bfa9-aad55e1c4edc.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681581644-9cc18fa8-e58c-4ca0-8349-0dd79f95f06c.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=959&id=u18a6430a&name=bf3733a5-5ca2-4f21-bfa9-aad55e1c4edc.png&originHeight=959&originWidth=1920&originalType=binary&ratio=1&rotation=0&showTitle=false&size=985198&status=done&style=none&taskId=u62ae3abf-d03b-470c-9fd6-c70b6c60220&title=&width=1920)
 
 非常地可爱但又酷炫，下面把它运用到我们自己的博客上面来。
 
+<a name="33e0e83e"></a>
 ### clone项目
 
 ```shell
@@ -134,41 +145,41 @@ git clone https://github.com/tangyuxian/hexo-theme-tangyuxian.git
 
 clone下的项目如下，上面是前面新建的Hexo项目hexo-qblog，下面是主题项目：
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312j7153d07af99f5dd030c3fc89840ff439%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmo3MTUzZDA3YWY5OWY1ZGQwMzBjM2ZjODk4NDBmZjQzOSJ9.fAevEdtJyzi3ejPce4JxT5jL0tZth-KholdDI9v56o4%26download%3Dimage.png&sign=b394d6f58033841b82aca7c8d13316e354d655db87c3ff920a2658a2a98d3fbe)
+![6ffc3de2-3dad-459a-b660-3b94efe2038c.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681600585-3b948c15-103d-4f36-b1fc-9287b96aa939.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=281&id=udfeb3e4c&name=6ffc3de2-3dad-459a-b660-3b94efe2038c.png&originHeight=281&originWidth=1014&originalType=binary&ratio=1&rotation=0&showTitle=false&size=13992&status=done&style=none&taskId=u24f08060-f5f4-4305-baab-c3087fc1f3b&title=&width=1014)
 
 将 hexo-theme-tangyuxian 重命名为 tangyuxian：
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312j883800c2662ca4827f7b8091d086e679%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmo4ODM4MDBjMjY2MmNhNDgyN2Y3YjgwOTFkMDg2ZTY3OSJ9.cU4JDnLcHay3_7VmTl3sPwJI_r2zG0Mpyl2LqLFOQ4w%26download%3Dimage.png&sign=1ea356d9b9df2fcc687a2ad6d3686ab789bfda38e5aa820577a7b07cd9463136)
+![13bbbcc8-f601-477a-b721-f8b9f437cc3e.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681623201-a8253b99-5449-462b-b30c-6790060ee6cc.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=268&id=ucb8ce3b4&name=13bbbcc8-f601-477a-b721-f8b9f437cc3e.png&originHeight=268&originWidth=974&originalType=binary&ratio=1&rotation=0&showTitle=false&size=14117&status=done&style=none&taskId=u9638393d-259f-40a7-9f40-fb5af4c2a80&title=&width=974)
 
 然后将 tangyuxian 整个文件夹复制到 hexo-qblog\themes 文件夹下面，如下图：
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312j3ed0cb8ee26d87ef5ce81b90d18f65f2%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmozZWQwY2I4ZWUyNmQ4N2VmNWNlODFiOTBkMThmNjVmMiJ9.b1iAscqOTl79-jAo7zV-DCqwyLGqZeYAJfUh2pV99N0%26download%3Dimage.png&sign=1503d59512da0f7908f34e28483074748f11dec7394f6a6bfaa42695479dda9f)
+![ad88922f-fae2-4a25-a2bd-202e2c308275.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681637822-995d09dc-f5d3-43b4-bb26-3fbba3c814b3.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=255&id=uc6c7d839&name=ad88922f-fae2-4a25-a2bd-202e2c308275.png&originHeight=255&originWidth=999&originalType=binary&ratio=1&rotation=0&showTitle=false&size=20522&status=done&style=none&taskId=u0d79e99c-1f1e-41f0-a09f-3f57f904200&title=&width=999)
 
 然后进入hexo-theme-tangyuxian 文件夹删除 .git 目录，并复制 _config.yml 文件：
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312j09943e0630ef456b25d3fdb65560fca6%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmowOTk0M2UwNjMwZWY0NTZiMjVkM2ZkYjY1NTYwZmNhNiJ9.fWEZ-gm3-YgQNxkKl3J2T-B6aaW6u7uL53fYPw-CCAY%26download%3Dimage.png&sign=35ab5b6e20a27f0befd8bdd76e55b9ea473e907162b016480f104c0b2d6cdf95)
+![c9fe9451-dd73-449c-9262-706ccdec7a13.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681653027-c19d1b75-a0d6-4998-ac53-ba214d41d773.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=412&id=uf13bc216&name=c9fe9451-dd73-449c-9262-706ccdec7a13.png&originHeight=412&originWidth=1019&originalType=binary&ratio=1&rotation=0&showTitle=false&size=49245&status=done&style=none&taskId=u79e7a87a-8215-49a0-bcb8-a810cb0f9d3&title=&width=1019)
 
 将上面复制的文件 _config.yml 粘贴到项目根目录 hexo-qblog 文件夹下面，并重命名为_config.tangyuxian.yml，表示这是 tangyuxian 主题的配置文件：
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312j834872a69fccbf595a2a3fec3e11e285%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmo4MzQ4NzJhNjlmY2NiZjU5NWEyYTNmZWMzZTExZTI4NSJ9.Y0YXg4UelB_PalnvkSouZOQ1lV1P3GROVYjG3-dH9vY%26download%3Dimage.png&sign=d9906d905b394f71044a9101d4e4171214527295d0fbcb66fd85aceda168a33d)
+![f59da27a-69db-4620-bc4e-2f2dbabbbfe6.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681677714-c5e0e34d-70b9-4c8d-a659-962f6333bebe.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=396&id=ubd376d31&name=f59da27a-69db-4620-bc4e-2f2dbabbbfe6.png&originHeight=396&originWidth=986&originalType=binary&ratio=1&rotation=0&showTitle=false&size=47215&status=done&style=none&taskId=u3f9091b8-3546-468a-9f43-757cdc765ec&title=&width=986)
 
 打开 hexo-qblog 整个项目文件夹（我这里是用VS Code），修改项目根目录下的 _config.yml 文件，找到文件 theme 字段，修改为 tangyuxian：
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312jd2dd6a2df9aa79d2905a8dd8bcc9e275%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmpkMmRkNmEyZGY5YWE3OWQyOTA1YThkZDhiY2M5ZTI3NSJ9.Me8qEByxuYzJssC5TkxUwTrhlrtyFdVLqD3BWS44htg%26download%3Dimage.png&sign=78ef0ec1addcfd2e9afb88b1e002410125a838e04b7d791c8cb6d8ef7c912516)
+![94e249cc-dc48-488e-a1d1-06e43ab371cb.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681693583-60653d76-f245-48af-a263-c3910089ed3b.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=1030&id=u58b0da0e&name=94e249cc-dc48-488e-a1d1-06e43ab371cb.png&originHeight=1030&originWidth=1920&originalType=binary&ratio=1&rotation=0&showTitle=false&size=158845&status=done&style=none&taskId=u4331e1dd-262e-4adb-b8b1-e3486bd58d6&title=&width=1920)
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312j34aff379590e0a9d023c699a9765c891%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmozNGFmZjM3OTU5MGUwYTlkMDIzYzY5OWE5NzY1Yzg5MSJ9.Yh3cAKAys9qGEohPeHO5HQ0QVIqFI1EAuahHQ6RiKAA%26download%3Dimage.png&sign=0fd59d55903dbfbf21cdc37fdb5497eb77b5e2a92f07dc0a3aa6f57fc78f6261)
+![cc107c22-f452-4a6c-b81f-933afe805cc7.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681708978-3b800238-1a0b-4dfc-ba7a-ae3a3109781e.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=1030&id=u0423326f&name=cc107c22-f452-4a6c-b81f-933afe805cc7.png&originHeight=1030&originWidth=1920&originalType=binary&ratio=1&rotation=0&showTitle=false&size=154744&status=done&style=none&taskId=u727305c6-b6be-46e3-8317-fd3729639ee&title=&width=1920)
 
 这样整个主题就更换完成了，另外由于主题默认已经集成了文章【字数统计】、【阅读时长】统计功能，需要WordCount的支持，运行如下命令安装`npm i --save hexo-wordcount`：
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312j187e681a44144a6ef30c4f0c268b91fb%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmoxODdlNjgxYTQ0MTQ0YTZlZjMwYzRmMGMyNjhiOTFmYiJ9.cOWJNexpJawsGg51YQlLCKtMfjuNAD6uADza3Jh56bY%26download%3Dimage.png&sign=e5b404c091c44fdeaa6ec4d1180b9c336d4822832821e9492e2a812c68b0d44b)
+![16c0c106-013b-4495-ab70-788143121fcb.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681733376-7e83d334-fec6-4c0e-8d17-114b094c4891.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=363&id=ue0fc3cdf&name=16c0c106-013b-4495-ab70-788143121fcb.png&originHeight=363&originWidth=847&originalType=binary&ratio=1&rotation=0&showTitle=false&size=34607&status=done&style=none&taskId=u286daa67-35cc-4cd2-bd37-8f00d3f3b2a&title=&width=847)
 
 下面就可以按照前文所说运行项目了`hexo server --debug`：
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312j93273f040f455b3bd15efc0bacf1ece2%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmo5MzI3M2YwNDBmNDU1YjNiZDE1ZWZjMGJhY2YxZWNlMiJ9._zHbtc8oI6oTbs_brObEnk9zOiQW8Td1ApBvz2bbHX8%26download%3Dimage.png&sign=20875eeef6db8024873ce576c71f711d0da5b67768b34355fb3a2b14ae97f7c4)
+![0345c964-83ad-4265-9384-dd7e6ad1b134.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681746396-7eb37b69-6e96-40d9-9992-dcb8b6c8b8c0.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=360&id=uc4745337&name=0345c964-83ad-4265-9384-dd7e6ad1b134.png&originHeight=360&originWidth=1199&originalType=binary&ratio=1&rotation=0&showTitle=false&size=113997&status=done&style=none&taskId=ud698032b-67f3-4e10-8d53-89ea5ba4bc1&title=&width=1199)
 
 然后打开[**http://localhost:4000/**](http://localhost:4000/)就会发现我们的主题已经焕然一新了：
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Ftcs.teambition.net%2Fstorage%2F312j7285d87e368cf4feed6fdbaaaa21c74d%3FSignature%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY1ODQwOTQ5MywiaWF0IjoxNjU3ODA0NjkzLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMmo3Mjg1ZDg3ZTM2OGNmNGZlZWQ2ZmRiYWFhYTIxYzc0ZCJ9.inc6flPjQ-WVW4S_0tD0Txw2ODiZAHHwSXXSVCm_hbE%26download%3Dimage.png&sign=701de80ab6e0348caaaf017faaf36967d556406366e2c92928954cfb8395a015)
+![441b2025-5a13-4651-ae7a-35ab50589f3f.png](https://cdn.nlark.com/yuque/0/2022/png/376691/1659681763699-9bcebffb-4fb5-414c-ae02-935404149cbf.png#clientId=u62f5ab03-c7ca-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=992&id=u9cd6cbaa&name=441b2025-5a13-4651-ae7a-35ab50589f3f.png&originHeight=992&originWidth=1920&originalType=binary&ratio=1&rotation=0&showTitle=false&size=933605&status=done&style=none&taskId=u6bd03e97-bbf2-41c9-976c-db3c8ddfa9e&title=&width=1920)
 
 关于使用Hexo创建自己的博客项目并更换好看的主题就介绍完了，下期我们将介绍如何发布自己的博客，非常感谢大家的阅读。
 
